@@ -9,5 +9,7 @@ Data by the sensors and sent to raspberry pi, the raspberry pi then sends the da
 ## Technologies Used 
 - Python
 - Raspberry Pi
+- GPS, PIR and Ultrasonic Sensors
 - Azure Cloud
+- IoT Hub
 - Power BI Data Visualization
