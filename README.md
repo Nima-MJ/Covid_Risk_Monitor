@@ -1,10 +1,10 @@
 # Covid_Risk_Monitor
 
 ## **Project Description**
-The idea of this project is to design an IoT device that monitors a user’s covid risk level based on their daily activities and interactions. This device will make it easier for users to abide by the Public Health covid-19 guidelines and prevent rapid growth of covid-19 cases. The device will detect other humans through their emitted energy (electromagnetic radiation) and read their temperature. We also keep track of their distance (at least two meters) with our user. This device will also keep track of the user's location,which will allow the user to see who they might have been in contact with. This way if one user tests positive, we can alert other users who were at the same location about a potential exposure to covid-19. Taking into account all the data gathered through the day, the user will be notified of their risk level or get an exposure warning. 
+The purpose of this project is to create an IoT device that assesses a user's covid risk level based on their daily activities and interactions. The device will facilitate adherence to Public Health covid-19 guidelines and reduce the spread of the virus. It detects other people through electromagnetic radiation and measures their temperature, ensuring a safe distance of at least two meters with the user. The device also tracks the user's location to provide information about potential exposure to covid-19. Based on the collected data, the device informs the user of their risk level or issues an exposure warning.
 
 ## Components
-Data by the sensors and sent to raspberry pi, the raspberry pi then sends the data trhough a payload to IoT hub. The data is sent every two seconds to the IoT Hub and displayed to the user. (Code in SensorToCloud.py file)
+The sensors gather data and send it to the Raspberry Pi, which then sends the information through a payload to the IoT Hub. This data is updated every two seconds and displayed to the user through the IoT Hub. The implementation of this process is included in the SensorToCloud.py file. For more detailed information, please refer to the [Project Design PDF](https://github.com/Nima-MJ/Covid_Risk_Monitor/blob/a3f31e51de76bcdb13b05ddeff201441e2caca76/src/Project%20Design.pdf) and [Project Proposal PDF](https://github.com/Nima-MJ/Covid_Risk_Monitor/blob/a3f31e51de76bcdb13b05ddeff201441e2caca76/src/Project%20proposal.pdf). 
 
 ## Technologies Used 
 - Python
