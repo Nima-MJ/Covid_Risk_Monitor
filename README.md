@@ -10,7 +10,6 @@ The sensors gather data and send it to the Raspberry Pi, which then sends the in
 - Python: Used to gather the data from the GPIO pins and calculate the distance measured by the ultrasonic sensor using the pulse duration.
 - Raspberry Pi 3 model B (Raspian OS): The GPIO pins were utilized to retrieve data and supply power to the sensors mounted on the breadboard.
 - Libraries: Python GPIO Library, the Azure IoT Device SDK (both the regular and asynchronous versions)
-- Ultrasonic Sensors
 - GPS, PIR and Ultrasonic Sensors
 - Azure Cloud IoT Hub
 - Power BI Data Visualization
