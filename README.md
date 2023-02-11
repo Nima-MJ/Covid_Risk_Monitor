@@ -7,11 +7,12 @@ The purpose of this project is to create an IoT device that assesses a user's co
 The sensors gather data and send it to the Raspberry Pi, which then sends the information through a payload to the IoT Hub. This data is updated every two seconds and displayed to the user through the IoT Hub. The implementation of this process is included in the SensorToCloud.py file. For more detailed information, please refer to the [Project Design PDF](https://github.com/Nima-MJ/Covid_Risk_Monitor/blob/a3f31e51de76bcdb13b05ddeff201441e2caca76/src/Project%20Design.pdf) and [Project Proposal PDF](https://github.com/Nima-MJ/Covid_Risk_Monitor/blob/a3f31e51de76bcdb13b05ddeff201441e2caca76/src/Project%20proposal.pdf). 
 
 ## Technologies Used 
-- Python
-- Raspberry Pi
+- Python: Used to gather the data from the GPIO pins and calculate the distance measured by the ultrasonic sensor using the pulse duration.
+- Raspberry Pi 3 model B (Raspian OS): The GPIO pins were utilized to retrieve data and supply power to the sensors mounted on the breadboard.
+- Libraries: Python GPIO Library, the Azure IoT Device SDK (both the regular and asynchronous versions)
+- Ultrasonic Sensors
 - GPS, PIR and Ultrasonic Sensors
-- Azure Cloud
-- IoT Hub
+- Azure Cloud IoT Hub
 - Power BI Data Visualization
 
 ![alt text](https://github.com/Nima-MJ/Covid_Risk_Monitor/blob/main/src/Project%20Design.png?raw=true)
