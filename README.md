@@ -11,7 +11,7 @@ The sensors gather data and send it to the Raspberry Pi, which then sends the in
 - Raspberry Pi 3 model B (Raspian OS): The GPIO pins were utilized to retrieve data and supply power to the sensors mounted on the breadboard.
 - Libraries: Python GPIO Library, the Azure IoT Device SDK (both the regular and asynchronous versions)
 - GPS, PIR and Ultrasonic Sensors
-- Azure Cloud IoT Hub
+- Azure Cloud IoT Hub, AMQP Protocol was used for communication 
 - Power BI Data Visualization
 
 ![alt text](https://github.com/Nima-MJ/Covid_Risk_Monitor/blob/main/src/Project%20Design.png?raw=true)
