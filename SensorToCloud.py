@@ -1,12 +1,15 @@
+#Libraries and Packages needed to run this program
 import asyncio
 import time
 import RPi.GPIO as GPIO
 from azure.iot.device import Message
 from azure.iot.device.aio import IoTHubDeviceClient
 from gps import *
- 
+
+#IoT hub connection string 
 CONNECTION_STRING="HostName=ElectronicsIII.azure-devices.net;DeviceId=DemoPi;SharedAccessKey=tqEJuwMv7gKQmUUKHjuNJ6B7nyhoZWH4wbM4KWSkMZg="
 
+#Defining variables
 running = True
 DELAY = 2
 TEMPERATURE = 20.0
@@ -17,9 +20,9 @@ PIR_PIN = 23
 PAYLOAD = '{{"distance": {distance}, "PIR": {pir}, "longitude":{longitude}, "latitude":{latitude}}}'
 flag = True
 
+
 def getPositionData(gps):
     nx = gpsd.next()
-    # For a list of all supported classes and fields refer to:
     
     if nx['class'] == 'TPV':
         global flag
@@ -43,12 +46,11 @@ async def main():
         GPIO.setmode(GPIO.BCM)
         GPIO.cleanup()
  
-        # Read data using pin GPIO17       
+        # Read data using pin GPIO 21,20,23       
         GPIO.setup(TRIG, GPIO.OUT)
         GPIO.setup(ECHO,GPIO.IN)
         GPIO.setup(PIR_PIN, GPIO.IN)
  
-        #print("Sending serivce started. Press Ctrl-C to exit")
         while True:
             
             try:
@@ -59,7 +61,7 @@ async def main():
                         gpsResult = getPositionData(gpsd)
                     pir = 1
                     GPIO.output(TRIG,False)
-                    #print ("waiting for sensor to settle")
+                    print ("waiting for sensor to settle")
                     time.sleep(0.2)
                     GPIO.output(TRIG,True)
                     time.sleep(0.00001)
@@ -77,7 +79,7 @@ async def main():
                     await client.send_message(message)
                     
  
-                #print("Message successfully sent")
+                print("Message successfully sent")
                 await asyncio.sleep(1)
  
             except KeyboardInterrupt:
